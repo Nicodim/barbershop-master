@@ -66,6 +66,10 @@ a {
   margin-bottom: 60px;
   background-color: #000000;
 }
+.main-navigation-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+}
 .site-navigation {
   width: 620px;
   margin: 0;
@@ -95,10 +99,19 @@ a {
 .user-navigation a:focus {
   background-color: #242424;
 }
+.features {
+  margin-bottom: 80px;
+}
 .features-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 .feature-item {
+  width: 300px;
   text-align: center;
 }
 
@@ -107,6 +120,7 @@ a {
   line-height: 42px;
 }
 .index-columns {
+  padding: 50px 80px;
   color: #000000;
 
   background-color: #f8f5f2;
