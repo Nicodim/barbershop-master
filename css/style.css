@@ -283,6 +283,13 @@ input[type="radio"].visually-hidden {
 }
 .appointment-item {
   width: 140px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.appointment-item label {
+  display: block;
+  margin-bottom: 9px;
+  margin-left: 15px;
 }
 .appointment-item input {
   font: inherit;
