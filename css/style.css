@@ -478,13 +478,7 @@ input[type="radio"].visually-hidden {
   background-repeat: repeat;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
-.modal-show {
-  display: block;
-  animation: bounce 0.6s;
-}
-.modal-error {
-  animation: shake 0.6s;
-}
+
 .modal-login {
   
   top: 120px;
@@ -637,4 +631,11 @@ input[type="radio"].visually-hidden {
 }
 .modal-map p {
   margin: 0;
+}
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+.modal-error {
+  animation: shake 0.6s;
 }
