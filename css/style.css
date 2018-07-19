@@ -15,7 +15,7 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   background-color: #000000;
-  background-image: url("img/bg.jpg");
+  background-image: url("../img/bg.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   
@@ -125,7 +125,7 @@ input[type="radio"].visually-hidden {
 .site-navigation a,
 .user-navigation a {
   display: block;
-  padding: 25px 20px;
+  padding: 25px 15px;
   vertical-align: middle;
   color: #ffffff;
 }
@@ -429,7 +429,47 @@ input[type="radio"].visually-hidden {
 .restore:focus {
   text-decoration: none;
 }
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
 .modal {
+  display: none;
   color: #000000;
   position: fixed;
   background-color: #f8f3f0;
@@ -438,9 +478,15 @@ input[type="radio"].visually-hidden {
   background-repeat: repeat;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
-
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+.modal-error {
+  animation: shake 0.6s;
+}
 .modal-login {
-  display: none;
+  
   top: 120px;
   left: 50%;
   margin-left: -230px;
@@ -511,13 +557,13 @@ input[type="radio"].visually-hidden {
   margin: 15px 0;
 }
 .login-icon-user {
-  background-image: url("img/user.svg");
+  background-image: url("../img/user.png");
   background-position: 270px center;
   background-repeat: no-repeat;
 }
 
 .login-icon-password {
-  background-image: url("img/lock.svg");
+  background-image: url("../img/lock.png");
   background-position: 270px center;
   background-repeat: no-repeat;
 }
@@ -578,4 +624,17 @@ input[type="radio"].visually-hidden {
 .login-form .button {
   width: 100%;
   margin-right: 0;
+}
+.modal-map {
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 766px;
+  height: 561px;
+  margin-top: -280px;
+  margin-left: -390px;
+  border: 7px solid white;
+}
+.modal-map p {
+  margin: 0;
 }
