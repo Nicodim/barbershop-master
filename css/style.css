@@ -105,8 +105,9 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
 }
 .inner-page .main-navigation {
-  align-items: flex-start;
+    align-items: flex-start;
     flex-direction: row;
+    background-color: #000000;
 }
 .main-header-logo {
   order: 2;
@@ -183,10 +184,30 @@ input[type="radio"].visually-hidden {
   background-color: #ff0000;
 }
 .breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
   margin-bottom: 50px;
+}
+.breadcrumbs li {
+  position: relative;
+  margin-right: 42px;
+}
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+.breadcrumbs li::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 7px;
+  right: -25px;
+  background-color: #000000;
+  transform: rotate(45deg);
 }
 .breadcrumbs a {
   color: #000000;
@@ -198,6 +219,9 @@ input[type="radio"].visually-hidden {
 
 .breadcrumbs-current {
   color: #aba9a7;
+}
+.breadcrumbs-current::after {
+  display: none;
 }
 .features {
   margin-bottom: 80px;
@@ -319,14 +343,53 @@ input[type="radio"].visually-hidden {
 }
 .filter fieldset {
   border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.filter fieldset:first-child {
+  margin-bottom: 35px;
 }
 .filter legend {
+  margin-bottom: 26px;
   font-size: 24px;
   line-height: 30px;
 }
 .filter ul {
+  padding: 0;
+  margin: 0;
   list-style: none;
   line-height: 18px;
+}
+.filter-option {
+  margin-bottom: 19px;
+  padding-left: 45px;
+}
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+}
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -38px;
+  width: 12px;
+  height: 12px;
+  background-image: url("img/cross.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 .filter-input:hover + label,
 .filter-input:focus + label {
